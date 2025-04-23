@@ -45,8 +45,8 @@ app.use(passport_1.default.session());
 app.use('/api/users', UserRouter_1.default);
 app.use('/api/customers', CustomerRouter_1.default);
 //run project same url
-app.use(express_1.default.static(path_1.default.join(__dirname, '../client/build')));
+app.use(express_1.default.static(path_1.default.join(__dirname, '../../client/build')));
 app.get('*', (req, res) => {
-    res.sendFile(path_1.default.resolve(__dirname, '../client/build/index.html'));
+    res.sendFile(path_1.default.resolve(__dirname, '../../client/build/index.html'));
 });
 exports.default = app;
